@@ -1,0 +1,20 @@
+{
+  "name": "loisu_senpai",
+  "version": "1.0.0",
+  "description": "Bot Discord",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Loïs LIBESSART",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "git": "^0.1.5",
+    "mathjs": "^8.0.1",
+    "ms": "^2.1.2",
+    "opusscript": "0.0.7",
+    "superagent": "^6.1.0",
+    "ytdl-core": "^4.1.1"
+  }
+}
