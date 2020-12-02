@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("e410d3")
     .setTimestamp()
     .setTitle(`${message.author.username} donne une fessée à ${membre}`)
-    .setImage("https://tenor.com/view/spank-slap-butt-anime-gif-17784858")
+    .setImage("https://tenor.com/view/bad-beat-spank-punishment-gif-13569259")
     message.channel.send(spank_embed);
 }
 
