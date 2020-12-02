@@ -25,7 +25,7 @@ bot.login(process.env.BOT_TOKEN);
 
 bot.on('ready', async () => {
     console.log(`${bot.user.username} est en ligne`);
-    bot.user.setActivity('s*help | En développement');
+    bot.user.setActivity('s*help | Staring at you, Senpai~');
 });
 
 bot.on ('message', async message => {
