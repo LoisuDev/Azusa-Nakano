@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("e410d3")
     .setTimestamp()
     .setTitle(`${message.author.username} donne une gifle à ${membre}`)
-    .setImage("https://imgur.com/Agwwaj6")
+    .setImage("https://i.imgur.com/mIg8erJ.gif")
     message.channel.send(slap_embed);
 }
 
