@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
         .setColor('e410d3')
         .setThumbnail(boticon)
         .setTimestamp()
-        .setDescription("Liste des commandes disponibles : 8ball, ban, clear, dis, help, info, infoserv, kick, monnaie, mute, muted, niv, play, prefix, report, sondage, stop")
+        .setDescription("Liste des commandes disponibles : 8ball, ban, cheek, clear, dis, help, hug, info, infoserv, kick, kiss, monnaie, mute, muted, niv, play, poke, prefix, report, slap, sondage, spank, stop")
     return message.channel.send(help_embed);
 }
 
