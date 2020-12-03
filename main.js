@@ -93,7 +93,9 @@ bot.on ('message', async message => {
 
     let commandfile = bot.commands.get(command.slice(prefix.length));
     if (commandfile) commandfile.run(bot, message, args);
-
-
+    if (message.content === "Ta gueule") {
+        message.channel.send("...")
+        message.author.send("Senpai, t'es méchant... :pleading_face: Je te boude >.>")
+    }
 }) 
 
