@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
     let muterole = message.guild.roles.cache.find(x => x.name === "muted");
 
     if (!muterole) {
-        return message.channel.send("Le rôle 'muted' n'existe pas ! Veuillez le créer. Tapez ``s*muted`` pour savoir les prérequis.")
+        return message.channel.send("Le rôle 'muted' n'existe pas ! Veuillez le créer. Tapez ``<prefix>muted`` pour savoir les prérequis.")
         };
 
     
