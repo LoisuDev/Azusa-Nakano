@@ -7,7 +7,11 @@ module.exports.run = async (bot, message, args) => {
         .setColor('e410d3')
         .setThumbnail(boticon)
         .setTimestamp()
-        .setDescription("Liste des commandes disponibles : 8ball, ban, cheek, clear, dis, help, hug, info, infoserv, invite, kick, kiss, monnaie, mute, muted, niv, play, poke, prefix, prier, report, slap, sondage, spank, stop")
+        .addField('Commandes sur le bot et la config', 'help, info, infoserv, invite, noel, prefix')
+        .addField('Commandes fun', '8ball, cheek, dis, hug, kiss, poke, slap, spank')
+        .addField('Commande gestion serveur, modération', 'ban, clear, kick, mute, muted, report, sondage')
+        .addField('Commande base de données', 'monnaie, niv')
+        .addField('```Commande <prefix>prier```', 'Commande spéciale pour savoir comment prier pour Flaviant3 ♥')
     return message.channel.send(help_embed);
 }
 
