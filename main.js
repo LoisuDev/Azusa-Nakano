@@ -71,7 +71,7 @@ bot.on ('message', async message => {
 
     if (next_level <= current_exp) {
         exp[message.author.id].niveau += 1;
-        message.channel.send(`Félicitations Senpai, tu est passé au niveau ${current_niv + 1} >.< ♥`)
+        message.channel.send(`Félicitations <@${message.author.id}>, tu es passé au niveau ${current_niv + 1} >.< ♥`)
     }
 
     fs.writeFile('./exp.json', JSON.stringify(exp), err => {
