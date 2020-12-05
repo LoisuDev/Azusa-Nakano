@@ -95,7 +95,10 @@ bot.on ('message', async message => {
     if (commandfile) commandfile.run(bot, message, args);
     if (message.content === "Ta gueule" || message.content === "tg") {
         message.channel.send("...")
-        message.author.send("Senpai, t'es méchant... :pleading_face: Je te boude >.>")
+        message.author.send("Senpai, t'es méchant(e)... :pleading_face: Je te boude >.>")
+    }
+    if (message.content === "OwO" || message.content === "owo") {
+        return message.channel.send("What's this ?")
     }
 }) 
 
