@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client();
 const monnaie = require('./monnaie.json');
-const exp = require('./exp.json');
+
 
 bot.commands = new Discord.Collection();
 
@@ -53,30 +53,6 @@ bot.on ('message', async message => {
     fs.writeFile('./monnaie.json', JSON.stringify(monnaie), err => {
         if(err) console.log(err);
     });
-
-    //Système d'exp
-
-    let add_exp = Math.floor(Math.random() * 5) + 1;
-    if (!exp[message.author.id]) {
-        exp[message.author.id] = {
-            exp: 0,
-            niveau: 1
-        };
-    }
-
-    let current_exp = exp[message.author.id].exp;
-    let current_niv = exp[message.author.id].niveau;
-    let next_level = current_niv * 100;
-    exp[message.author.id].exp = current_exp + add_exp;
-
-    if (next_level <= current_exp) {
-        exp[message.author.id].niveau += 1;
-        message.channel.send(`Félicitations <@${message.author.id}>, tu es passé au niveau ${current_niv + 1} >.< ♥`)
-    }
-
-    fs.writeFile('./exp.json', JSON.stringify(exp), err => {
-        if(err) console.log(err);
-    })
 
     //Variables
 
