@@ -32,7 +32,7 @@ bot.on ('message', async message => {
     if(message.author.bot) return;
     if(message.channel.type === 'dm') return;
 
-    let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
+    
 
     //Système de monnaie
 
@@ -56,13 +56,8 @@ bot.on ('message', async message => {
 
     //Variables
 
-    if (!prefixes[message.guild.id]) {
-        prefixes[message.guild.id] = {
-            prefixes: process.env.PREFIX
-        };
-    }
 
-    let prefix = prefixes[message.guild.id].prefixes;
+    let prefix = process.env.PREFIX;
     let messageArray = message.content.split(" ");
     let command = messageArray[0];
     let args = messageArray.slice(1);
