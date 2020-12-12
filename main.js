@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client();
 const monnaie = require('./monnaie.json');
-let prefix = process.env.PREFIX;
+
 
 
 bot.commands = new Discord.Collection();
@@ -32,7 +32,9 @@ bot.on('ready', async () => {
 bot.on ('message', async message => {
     if(message.author.bot) return;
     if(message.channel.type === 'dm') return;
-    if(!message.content.startsWith(prefix)) return;
+    
+
+    let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
 
     
 
@@ -57,7 +59,14 @@ bot.on ('message', async message => {
     });
 
     //Variables
+    if (!prefixes[message.guild.id]) {
+        prefixes[message.guild.id] = {
+            prefixes: process.env.PREFIX
+        };
+    }
 
+    let prefix = prefixes[message.guild.id].prefixes;
+    if(!message.content.startsWith(prefix)) return;
 
     let messageArray = message.content.split(" ");
     let command = messageArray[0];
