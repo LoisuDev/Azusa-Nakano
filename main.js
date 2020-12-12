@@ -26,7 +26,10 @@ bot.login(process.env.BOT_TOKEN);
 
 bot.on('ready', async () => {
     console.log(`${bot.user.username} est en ligne`);
-    bot.user.setActivity('s*help | Staring at you, Senpai~');
+    bot.user.setActivity("s*help | Joue avec moi, Senpai >~<", {
+        type : "STREAMING",
+        url : "https://www.twitch.tv/monstercat"
+    });
 });
 
 bot.on ('message', async message => {
