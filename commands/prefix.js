@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     if (!message.member.hasPermission("MANAGE_GUILD")) 
         return message.channel.send("Senpai, vous n'avez pas le droit de faire ça >.< ♥")
     if (!args[0] || args[0 == "help"])
-        return message.channel.send(`Senpai, voici comment on change le préfix >.< ♥ : ${prefixes[message.guild.id].prefixes}prefix <préfix désiré>`);
+        return message.channel.send(`Senpai, voici comment on change le préfix >.< ♥ : <prefix>prefix <préfix désiré>`);
     
     let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
 
