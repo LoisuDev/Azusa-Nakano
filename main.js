@@ -62,15 +62,9 @@ bot.on ('message', async message => {
     let command = messageArray[0];
     let args = messageArray.slice(1);
 
-    let commandfile = bot.commands.get(command.slice(prefix));
+    let commandfile = bot.commands.get(command.slice(prefix.length));
     if (commandfile) commandfile.run(bot, message, args);
-    if (message.content === "Ta gueule" || message.content === "tg") {
-        message.channel.send("...")
-        message.author.send("Senpai, t'es méchant(e)... :pleading_face: Je te boude >.>")
-    }
-    if (message.content === "OwO" || message.content === "owo") {
-        return message.channel.send("What's this ?")
-    }
+    
 }) 
 
 //command.slice(prefix.length)
