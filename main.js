@@ -62,7 +62,7 @@ bot.on ('message', async message => {
     let command = messageArray[0];
     let args = messageArray.slice(1);
 
-    let commandfile = bot.commands.get();
+    let commandfile = bot.commands.get(command);
     if (commandfile) commandfile.run(bot, message, args);
     if (message.content === "Ta gueule" || message.content === "tg") {
         message.channel.send("...")
