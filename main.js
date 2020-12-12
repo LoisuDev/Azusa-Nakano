@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client();
 const monnaie = require('./monnaie.json');
+let prefix = process.env.PREFIX;
 
 
 bot.commands = new Discord.Collection();
@@ -57,7 +58,6 @@ bot.on ('message', async message => {
     //Variables
 
 
-    let prefix = process.env.PREFIX;
     let messageArray = message.content.split(" ");
     let command = messageArray[0];
     let args = messageArray.slice(1);
