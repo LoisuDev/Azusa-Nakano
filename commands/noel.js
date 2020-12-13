@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
    let noel_embed = new Discord.MessageEmbed()
     .setColor('e410d3')
     .setTitle('Joyeux Noël, Senpai ! ♥')
-    .setDescription(`${noel_user.username}, ${message.author.username} te souhaite un joyeux Noël !`)
+    .setDescription(`${noel_user.displayName}, ${message.author.username} te souhaite un joyeux Noël !`)
     .setThumbnail(boticon)
     .setImage('https://i.pinimg.com/originals/63/28/8e/63288ec10cedbb9146627535d2711a7a.gif')
 
