@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
             .setTimestamp()
         return message.channel.send(hb1_embed);
     };
-    let member_name = member.displayName();
+    let member_name = member.displayName;
     let hb2_embed = new Discord.MessageEmbed()
         .setAuthor(member_name)
         .setTitle("Informations sur l'utilisateur")
