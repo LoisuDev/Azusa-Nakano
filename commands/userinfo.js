@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
         .setTitle("Informations sur l'utilisateur")
         .setDescription(`Serveur : ${message.guild.name}`)
         .addField('Client ID', member.id)
-        .addField('Compte créé le', member.createdAt)
+        .addField('A rejoint le serveur le', member.joinedAt)
         .setFooter('hb')
         .setTimestamp()
     return message.channel.send(hb2_embed);
