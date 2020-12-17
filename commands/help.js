@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
         .setColor('e410d3')
         .setThumbnail(boticon)
         .setTimestamp()
-        .addField('Commandes sur le bot et la config', 'help, info, infoserv, invite, noel, prefix')
+        .addField('Commandes sur le bot et la config', 'help, info, infoserv, invite, noel, prefix, userinfo')
         .addField('Commandes fun', '8ball, cheek, dis, hug, kiss, poke, slap, spank')
         .addField('Commande gestion serveur, modération', 'ban, clear, kick, mute, muted, report, sondage')
         .addField('Commande base de données', 'monnaie')
