@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
     let hb2_embed = new Discord.MessageEmbed()
         .setAuthor(member_name)
         .setTitle("Informations sur l'utilisateur")
-        .setDescription(`Serveur : ${message.author.name}`)
+        .setDescription(`Serveur : ${message.guild.name}`)
         .addField('Client ID', member.id)
         .addField('Compte créé le', member.createdAt)
         .setFooter('hb')
