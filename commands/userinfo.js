@@ -14,7 +14,6 @@ module.exports.run = async (bot, message, args) => {
             .setTimestamp()
         return message.channel.send(hb1_embed);
     };
-    let member_icon = member.displayAvatarURL();
     let member_name = member.displayName();
     let hb2_embed = new Discord.MessageEmbed()
         .setAuthor(member_name)
@@ -22,7 +21,6 @@ module.exports.run = async (bot, message, args) => {
         .setDescription(`Serveur : ${message.author.name}`)
         .addField('Client ID', member.id)
         .addField('Compte créé le', member.createdAt)
-        .setThumbnail(member_icon)
         .setFooter('hb')
         .setTimestamp()
     return message.channel.send(hb2_embed);
