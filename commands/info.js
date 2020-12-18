@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
         .addField('Nom du bot', bot.user.username)
         .addField('Client ID', bot.user.id)
         .addField('Créé par', '@🌸𝙰𝚣𝚞𝚜𝚊-𝙲𝚑𝚊𝚗.🌸#9999')
-        .addField('Créé le', bot.user.createdTimestamp)
+        .addField('Créé le', bot.user.createdAt)
     return message.channel.send(info_embed);
 }
 
