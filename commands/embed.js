@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     let thumbnail = args[1];
     let image = args[2];
     let color = args[3];
-    let description = args.join(' ');
+    let description = args.join(' ').slice(4)
     if (!args[0] || !args[1] || !args[2] || !args[3] || !args[4] || args[0] == 'help') {
         return message.channel.send('``<prefix>embed titre thumbnail image couleur description');
     }
