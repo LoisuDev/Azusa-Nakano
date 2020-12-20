@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
         .setThumbnail(boticon)
         .setTimestamp()
         .addField('Commandes sur le bot et la config', 'help, info, infoserv, invite, noel, prefix, userinfo')
-        .addField('Commandes fun', '8ball, cheek, dis, flaviant3, hb, hug, kiss, ohayo, poke, sayonara, slap, spank')
+        .addField('Commandes fun', '8ball, cheek, dis, flaviant3, hb, hug, kiss, ohayo, poke, pp, sayonara, slap, spank')
         .addField('Commande gestion serveur, modération', 'ban, clear, kick, mute, muted, report, sondage')
         .addField('Commande base de données', 'monnaie, presentation')
         .addField('```Commande <prefix>prier```', 'Commande spéciale pour savoir comment prier pour Flaviant3 ♥')
