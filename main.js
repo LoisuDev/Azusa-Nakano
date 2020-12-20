@@ -24,12 +24,18 @@ fs.readdir('./commands/', (err, files) => {
 
 bot.login(process.env.BOT_TOKEN);
 
-bot.on('ready', async () => {
-    console.log(`${bot.user.username} est en ligne`);
-    bot.user.setActivity("s*help | Joue avec moi, Senpai >~<", {
-        type : "STREAMING",
-        url : "https://www.twitch.tv/azusachan112"
-    });
+const activities_list = [
+    "s*help | Joue avec moi, Senpai >.< ♥", 
+    "s*help | Nanami, c'est la plus kawaii >///<",
+    "s*help | Abonnez-vous à flaviant3 ♥", 
+    "s*help | Bientôt Noël *^*"
+    ]; // creates an arraylist containing phrases you want your bot to switch through.
+
+bot.on('ready', () => {
+    setInterval(() => {
+        const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
+        bot.user.setActivity(activities_list[index]); // sets bot's activities to one of the phrases in the arraylist.
+    }, 10000); // Runs this every 10 seconds.
 });
 
 bot.on ('message', async message => {
