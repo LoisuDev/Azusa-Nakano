@@ -1,6 +1,7 @@
 const Discord = require ('discord.js');
 
 module.exports.run = async (bot, message, args) => {
+    if (!message.member.hasPermission('MANAGE_SERVER')) return;
     let dm = args.join(" ");
     const members =  message.channel.guild.members.cache;
 
