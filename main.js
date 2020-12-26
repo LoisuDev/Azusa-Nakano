@@ -23,7 +23,7 @@ fs.readdir('./commands/', (err, files) => {
     })
 })
 
-bot.login("NzgzMzc2ODA2NTA5ODA1NTY4.X8Z2gQ.Dc2YLjPgUAl4AC0Ix98_Yp8YIag");
+bot.login(process.env.BOT_TOKEN);
 
 const activities_list = [
     "s*help | Joue avec moi, Senpai >.< ♥", 
@@ -71,7 +71,7 @@ bot.on ('message', async message => {
     //Variables
     if (!prefixes[message.guild.id]) {
         prefixes[message.guild.id] = {
-            prefixes: "s*"
+            prefixes: process.env.PREFIX
         };
     }
 
