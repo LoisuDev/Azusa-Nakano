@@ -1,6 +1,8 @@
 const Discord = require("discord.js")
+const superagent = require('superagent');
 
 module.exports.run = async (bot, message, args) => {
+    let { body } = await superagent.get(`https://nekos.life/api/v2/img/spank`)
     const member = message.mentions.members.first();
     if (!args[0]) return message.channel.send("Senpai, veuillez mentionner un utilisateur ! >.> ♥")
     if (!member) return message.channel.send("Senpai, vous devez mentionner, pas écrire le nom de la personne >.>")
@@ -9,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("e410d3")
     .setTimestamp()
     .setTitle(`${message.author.username} donne une fessée à ${membre}`)
-    .setImage("https://media1.tenor.com/images/1ffbabd05e0be468f035680111da8325/tenor.gif")
+    .setImage(body.url)
     message.channel.send(spank_embed);
 }
 

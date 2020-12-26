@@ -5,6 +5,7 @@ const monnaie = require('./monnaie.json');
 
 
 
+
 bot.commands = new Discord.Collection();
 
 fs.readdir('./commands/', (err, files) => {
@@ -22,7 +23,7 @@ fs.readdir('./commands/', (err, files) => {
     })
 })
 
-bot.login(process.env.BOT_TOKEN);
+bot.login("NzgzMzc2ODA2NTA5ODA1NTY4.X8Z2gQ.Dc2YLjPgUAl4AC0Ix98_Yp8YIag");
 
 const activities_list = [
     "s*help | Joue avec moi, Senpai >.< ♥", 
@@ -70,7 +71,7 @@ bot.on ('message', async message => {
     //Variables
     if (!prefixes[message.guild.id]) {
         prefixes[message.guild.id] = {
-            prefixes: process.env.PREFIX
+            prefixes: "s*"
         };
     }
 
