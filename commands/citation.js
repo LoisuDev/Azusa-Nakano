@@ -15,5 +15,7 @@ module.exports.run = async (bot, message, args) => {
     "Cette voiture a des phares méchants. - Loïs 2021",
     "La blague commence à perdre de son fun. - Loïs 2020",
     "J'ai mal aux cheveux - Loïs 2020"
-  ]
+  ];
+  let res = Math.floor((Math.random() * citations.length));
+  return message.channel.send(citations[res]);
 }
