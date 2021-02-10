@@ -46,28 +46,6 @@ bot.on ('message', async message => {
 
     let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
 
-    
-
-    //Système de monnaie
-
-    if (!monnaie[message.author.id]) {
-        monnaie[message.author.id] = {
-            monnaie : 0
-        };
-    }
-
-    let base_monnaie = Math.floor(Math.random() * 5) + 1;
-    let ajout_monnaie = Math.floor(Math.random() * 3) + 1;
-
-    if (ajout_monnaie === base_monnaie) {
-        monnaie[message.author.id] = {
-            monnaie: monnaie[message.author.id].monnaie + ajout_monnaie
-        }
-    }
-    fs.writeFile('./monnaie.json', JSON.stringify(monnaie), err => {
-        if(err) console.log(err);
-    });
-
     //Variables
     if (!prefixes[message.guild.id]) {
         prefixes[message.guild.id] = {
